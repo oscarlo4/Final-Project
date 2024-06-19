@@ -1,0 +1,217 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Calibri", "Arial", sans-serif;
+  background-color: white;
+  margin: 0;
+  font-size: 18px;
+}
+
+#mainTitle {
+  flex: 1;
+  text-align: center;
+  align-self: center;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+h1, h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+
+.information {
+  padding: 5px 20px 5px;
+  border: 3px solid black;
+  margin: 0 15px 15px 15px;
+  text-align: left;
+  position: relative;
+}
+
+.start {
+  text-align: left;
+}
+
+#output {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+header {
+  background-color: #2F68DC;
+  padding: 10px;
+  display: flex;
+  align-self: center;
+}
+
+.middle {
+  background-color: beige;
+  border: 5px solid black;
+  font-size: 18px;
+  flex: 2;
+  align-items: center;
+  display: grid;
+  align-items: center;
+  grid-gap: 5px;
+  grid-template-areas: "titlearea" "headarea" "firstarea" "secondarea";
+}
+
+#image {
+  padding: 5px 20px;
+  height: 300px;
+  width: auto;
+  border: none;
+  max-width: 100%;
+}
+
+.buttonContainer {
+  align-items: center;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px 5px 5px 5px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.area0 {
+  grid-area: titlearea;
+}
+
+.area1 {
+  grid-area: headarea;
+  background-color: white;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.area2 {
+  grid-area: firstarea;
+}
+
+.area3 {
+  grid-area: secondarea;
+  align-items: center;
+}
+
+.word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 15px;
+}
+
+.hint {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+@media (max-width: 800px) {
+  .middle {
+    background-color: white;
+    border: 5px solid black;
+    font-size: 18px;
+    flex: 3;
+    display: grid;
+    align-items: flex-start;
+    grid-gap: 5px;
+    grid-template-areas: "titlearea" "headarea" "firstarea" "secondarea";
+  }
+  .wrapper {
+    padding: 10px;
+  }
+}
+.keyboard {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.key {
+  padding: 15px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.key:hover {
+  background-color: darkgray;
+}
+
+.key:active {
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.key:disabled {
+  background-color: lightgray;
+  cursor: default;
+  pointer-events: none;
+  transition: none;
+}
+
+.bullet {
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.score {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+footer {
+  margin-top: auto; /* Ensure footer is at the bottom */
+  background-color: black;
+  padding: 6px;
+  color: white;
+  text-align: right;
+}
